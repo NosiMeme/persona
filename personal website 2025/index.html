@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Personal.CSS">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>My 3-Year Programming Journey</title>
+
+</head>
+<body>
+
+<nav>
+<h2>MyPortfolio</h2>
+<ul style="text-align: center;">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="aboutme.html">About Me</a></li>
+    <li><a href="Journey.html">Journey</a></li>
+    <li><a href="Skill.html">Skill</a></li>
+    <li><a href="Complition.html">Complation</a></li>
+    <li><a href="Clubs.html">Clubs</a></li>
+    <li><a href="Gallary.html">Gallery</a></li>
+    
+   
+
+
+</ul>
+
+</nav>
+
+<header class="hero"><br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+    <br> 
+<h1 style="text-align: center;">Welcome to My Programming Journey</h1>
+<p>Explore how I evolved from writing my first line of code to building Website and code a app.</p>
+</header>
+
+
+
+
+
+<section id="quote" class="quote-box">
+    <h2>Need Some Inspiration?</h2>
+    <button onclick="showRandomQuote()">Get a Motivational Quote</button>
+    <p id="quote-text"></p>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    <footer>
+    &copy; 2025 My Programming Journey. All Rights Reserved.
+    </footer>
+    
+    <script>
+    const quotes = [
+    "Coding like poetry should be short and concise. ― Santosh Kalwar",
+    "First, solve the problem. Then, write the code. – John Johnson.",
+    "Code is like humor. When you have to explain it, it’s bad. – Cory House",
+    "Make it work, make it right, make it fast. – Kent Beck",
+    "Clean code always looks like it was written by someone who cares. — Robert C. Martin",
+    "Of course, bad code can be cleaned up. But it’s very expensive. — Robert C. Martin"
+    ];
+    
+    function showRandomQuote() {
+    const quote = quotes[Math.floor(Math.random() * quotes.length)];
+    document.getElementById("quote-text").textContent = quote;
+    }
+    
+    function navigateToSection(select) {
+    const id = select.value;
+    if (id) {
+    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+    }
+    }
+    
+    document.querySelectorAll(".skill").forEach(skill => {
+    skill.addEventListener("click", () => {
+    alert(`Showing work/projects related to: ${skill.textContent}`);
+    });
+    });
+    </script>
+
+</body>
+</html>
+
+
+
